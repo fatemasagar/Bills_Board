@@ -1,0 +1,6 @@
+.jumbotron {
+    /* add bootstrap jumbotron background image */
+    background: url("../img/Creative_Art_Green_Light-3D-Creative-Art-Wallpapers-1.jpg");
+    /* change bootstrap jumbotron text color */
+    color:#1F1F0A;
+}

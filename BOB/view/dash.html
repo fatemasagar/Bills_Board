@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../Resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Resources/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../Resources/css/font-awesome.min.css">
+    <script type="text/javascript" src="../js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="../Resources/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../img/iconbill.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>Bills on Board</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarc1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">&nbsp;Bills on Board</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarc1">
+                <ul class="nav navbar-nav">
+              <li ><a href="PrintBill.html"><i class="fa fa-ticket"></i>&nbsp;Create Bill</a></li>
+                    <li class="active"><a href="dash.html"><span class="glyphicon glyphicon-dashboard"></span>&nbsp;Dashboard</a></li>
+                   
+                    <li><a href="contactform.html"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;Contact Us</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+            
+                    <li><a href="#" id="loginlink"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign in</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal Window-->
+    <div class="modal fade" id="logonbox" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">Sign In</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="#signin" data-toggle="tab" data-caption="Sign in">Sign In</a></li>
+                            <li><a href="#signup" data-toggle="tab" data-caption="Sign up">Sign Up</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="signin">
+                                <form style="padding-top:5px">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" id="uname" placeholder="user name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="password" id="pass" placeholder="password">
+                                    </div>
+                                    <button class="btn btn-success btn-block" id="dologon">Sign in</button>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="signup">
+                                <form style="padding-top:5px">
+                                    <!--Name-->
+                                    <div class="form-group">
+                                        <input class="form-control" id="name" type="text" placeholder="Name">
+                                    </div>
+
+		<!--Shop name-->
+                                    <div class="form-group">
+                                        <input class="form-control" id="shopname" type="text" placeholder="Shop Name">
+                                    </div>
+
+		<!--Address-->
+                                    <div class="form-group">
+                                        <input class="form-control" id="address" type="text" placeholder="Address">
+                                    </div>
+
+                                    <!--email-->
+                                    <div class="form-group">
+                                        <input class="form-control" id="email" type="email" placeholder="E-mail">
+                                    </div>
+
+                                    <!--password-->
+                                    <div class="form-group">
+                                        <input class="form-control" id="Pass" type="password" placeholder="Password">
+                                    </div>
+
+                                    <!--password confirm-->
+                                    <div class="form-group">
+                                        <input class="form-control" id="Cpass" type="password" placeholder="Confirm Password">
+                                    </div>
+                                    <button class="btn btn-success btn-block" id="dosignup">Sign Up</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Of Modal Window-->
+    <div class="container-fluid" style="padding-top:80px;">
+
+        
+        <!-- panel 2-->
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+    <div class="panel panel-info">
+    <div class="panel-heading">
+        <h4 class="panel-title">Recent Trains</h4>
+        </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+        <table class="table table-borderd table-striped table-condensed table-hover" >
+        <tr class="active">
+            <th style="display:inline">Sr No</th>
+            <th>Train No</th>
+            <th>Train Name</th>
+            <th>From</th>
+            <th>Depature</th>
+            <th>To</th>
+            <th>Arrival</th>
+            <th>Distance(Km)</th>
+            <th>Travel Time</th>
+            <th>Avalable</th>
+            <th>Classes</th>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td class="info">14007</td><!--Train no-->
+                <td class="info">Maharastra Exp</td><!--Train name-->
+                <td class="info">Nagpur</td><!--from-->
+                <td class="info">10.55 PM</td><!--depature-->
+                <td class="info">Pune Jn</td><!--to-->           
+                <td class="info">04.40 PM</td><!--Arrival-->
+                <td class="info">889</td><!--distance-->
+                <td class="info">17.45</td><!--travel time-->
+                <td class="info"><span class="glyphicon glyphicon-ok"></span>&nbsp;</td><!--Train no-->
+                <td class="info">
+                <a href="#">2A</a>
+                    <a href="#">3A</a>
+                    <a href="#">SL</a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td class="info">14007</td><!--Train no-->
+                <td class="info">Maharastra Exp</td><!--Train name-->
+                <td class="info">Nagpur</td><!--from-->
+                <td class="info">10.55 PM</td>
+                <td class="info">Pune Jn</td>
+                
+                <td class="info">04.40 PM</td>
+                <td class="info">889</td>
+                <td class="info">17.45</td>
+                <td class="info"><span class="glyphicon glyphicon-ok"></span>&nbsp;</td>
+                <td class="info">
+                <a href="#">2A</a>
+                    <a href="#">3A</a>
+                    <a href="#">SL</a>
+                </td>
+            </tr>
+          
+        </table>
+        
+        </div>
+        </div>
+    </div>
+        </div>
+        <!-- End of Panel2-->
+        </div>
+    </div>
+   
+</body>
+
+<!--script-->
+<script>
+    $('#loginlink').on('click', function (e) {
+        $('#logonbox').modal({
+            keyboard: false,
+            backdrop: 'static'
+        });
+    });
+    $('#dologon').on('click', function (e) {
+        alert('Thank you for Signing In');
+        $('#logonbox').modal('hide');
+    });
+
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var data = $(e.target).data('caption');
+        var model = $('#logonbox');
+        model.find('.modal-title').text(data);
+    });
+</script>
+<!--End Of Script-->
+
+</html>
